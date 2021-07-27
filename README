@@ -2,8 +2,8 @@ This repository contains multiple implementations for counting the alphabet freq
 
 Data folder: Contains the input text files
 
-One folder: Contains the basic algorithm for counting the alphabet frequencyu of text files within the data folder
+Zero folder: Contains the basic algorithm for counting the alphabet frequencyu of text files within the data folder
 
-Two folder: Contains an implementation using multiple processes
+One folder: Contains an implementation using multiple processes
 
-Three folder: Contains an implementation using multiple threads
+Two folder: Contains an implementation using multiple threads
