@@ -1,0 +1,38 @@
+/*
+Reymond Pamelar
+CS 570-02
+July 25, 2021
+Programming Assignment #2
+README
+*/
+
+**alphabetcountmulthreads.c**
+
+Description:
+	- this file implements the alphabetcountmulthreads function.
+	- The alphabetcountmulthreads function counts the frequency of each alphabet letter (a-z, case insensitive) in all the .txt files under
+  	  directory of the given path and write the results to a file named as filetowrite. This is implemented using multithreading.
+
+Implementation:
+1. Open path directory and retrieve input file names
+2. Concatenate the path and the file names and store full path of files into an array
+3. Create an array which stores the ascii values of the alphabet
+4. Create an array to store the amount of files for each thread
+	- Iterate from zero to the max amount of files and add one per loop to the amount of files for that thread
+5. Create a struct to store the indices of files for where a thread will run within using the array that stores the amount of files for each thread
+6. Create the specified amount of threads and send the struct as an argument
+	- Each thread will iterate within the specified start and end indices of provided by the struct
+	- Read a character one by one and compare to each alphabet letter
+	- Convert uppercase letters to lower case
+	- Protected using a mutex, a global variable exactly the same as "alphabetfreq" will store the alphabet frequencies
+	- Increment the integer corresponding to the alphabet's index in the global alphabetfreq array
+7. Join the finished threads
+	- As threads finish, update the original "alphabetfreq" variable
+8. Create a "result" directory if it has not already been made
+9. Write all letter frequencies to filetowrite path
+
+How To Run:
+1. Within the programming folder, change directory to path : "../two"
+2. Compile using : "make"
+3. Run using : "./testmulthreads <# of threads to create>"
+4. Results will be outputted to the terminal and the results folder

@@ -1,0 +1,32 @@
+/*
+Reymond Pamelar
+CS 570-02
+Programming Assignment #1
+July 18, 2021
+*/
+
+**mulproc.c**
+
+Description:
+This program will fork two child processes running the two programs generated in programming zero in parallel.
+
+Implementation:
+1. Create two variables (a and b) of type pid_t
+2. Assign the fork function first to variable a
+3. Check if a is equal to 0. 
+	-If it is, the fork is successful. 
+	-Print the execution statement with the process id number
+	-Using execv, execute the command to run testalphabet
+4. Check if a is greater than 0.
+	-Assign the fork function to variable b
+	-check if b is equal to 0 to for a successful fork
+	-Print the execution statement with the process id number
+	-Using execv, execute the command to run testspecial
+	-Wait for this process to finish to print the finishing statement for this process.
+5. Wait for process a to finish to print the finishing statement for this process.
+
+How To Run:
+1. Change directory to path : "../one"
+3. Compile using : "make"
+4. Run using : "./mulproc"
+5. Results will be outputted to the terminal

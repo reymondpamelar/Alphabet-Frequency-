@@ -1,0 +1,49 @@
+Reymond Pamelar
+CS570 - 02
+June 8, 2021
+
+**alphabetcount.c**
+
+Description:
+The alphabetlettercount function counts the frequency of each alphabet letter (a-z, case insensitive) in all the .txt files under
+directory of the given path and write the results to a file named as filetowrite.
+
+Implementation:
+1. Open path directory and retrieve input file names
+2. Concatenate the path and the file names and store full path of files into an array
+3. Create an array which stores the ascii values of the alphabet
+4. Iterate through each input file 
+5. Read a character one by one and compare to each alphabet letter
+6. Increment the integer corresponding to the alphabet's index in the alphabetfreq array
+7. Create a "result" directory if it has not already been made
+8. Write all letter frequencies to filetowrite path
+
+How To Run:
+1. Change directory to path : "../zero"
+3. Compile using : "make testalphabet"
+4. Run using : "./testalphabet"
+5. Results will be outputted to path : "../result/result.txt"
+
+
+**specialcharcount.c**
+
+Description:
+The specialcharcount function counts the frequency of the following 5 special characters:
+  ','   '.'   ':'    ';'    '!'
+in all the .txt files under directory of the given path and write the results to a file named as filetowrite.
+
+Implementation
+1. Open path directory and retrieve input file names
+2. Concatenate the path and the file names and store full path of files into an array
+3. Create an array which stores the ascii values of the special characters
+4. Iterate through each input file 
+5. Read a character one by one and compare to each special character
+6. Increment the integer corresponding to the special character's index in the charfreq array
+7. Create a "result" directory if it has not already been made
+8. Write all special character frequencies to filetowrite path
+
+How To Run:
+1. Change directory to path : "../zero"
+3. Compile using : "make testspecial"
+4. Run using : "./testspecial"
+5. Results will be outputted to path : "../result/result.txt"
